@@ -139,6 +139,46 @@
             color: #555;
         }
 
+        .unit1-visual {
+            margin-top: 2rem;
+            background: #fff;
+            border: 2px solid #2ecc71;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 8px 20px rgba(46, 204, 113, 0.08);
+        }
+
+        .unit1-visual img {
+            display: block;
+            width: 100%;
+            max-height: 760px;
+            object-fit: contain;
+            border-radius: 8px;
+            background-color: #f7f7f7;
+        }
+
+        .unit1-blog-space {
+            margin-top: 2rem;
+            min-height: 200px;
+            background: linear-gradient(180deg, #ffffff 0%, #fbfffc 100%);
+            border: 1px solid #dfeee4;
+            border-left: 4px solid #2ecc71;
+            border-radius: 8px;
+            padding: 1.5rem;
+            color: #555;
+        }
+
+        .unit1-blog-space h3 {
+            font-size: 1.25rem;
+            color: #2ecc71;
+            margin-bottom: 0.75rem;
+        }
+
+        .unit1-blog-space p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -193,7 +233,7 @@
         <section id="about" class="page active">
             <h1>About <span>Me</span></h1>
             <p>
-                Welcome to my portfolio! I'm Anda Paraschivu, a student at Indiana University, taking ENG W131 - Reading, Writing, & Inquiry. This space is dedicated to sharing my work and exploring the writing process, revisions, and reflective growth throughout the semester.
+                Welcome to my portfolio! I'm Anda Paraschivu, a student at Indiana University, taking ENG W131 - Reading, Writing, & Inquiry. This space is dedicated to sharing my work and exploring the many ways writing shapes the way I think and communicate.
             </p>
             <p>
                 Through this portfolio, you'll be able to see my writing process, the revisions that change and help better my work, and the reflections that guide my writing journey.
@@ -202,10 +242,10 @@
             <div class="welcome-section">
                 <h2><span style="color: #2ecc71;">About Me</span></h2>
                 <p>
-                    My name is Anda Paraschivu, and I am a student at Indiana University majoring in Journalism. Currently, I am about to begin my sophomore year and I am really excited about the opportunities ahead. Writing has always been a way for me to express my thoughts, and I am passionate about learning how to become a stronger and more thoughtful writer.
+                    My name is Anda Paraschivu, and I am a student at Indiana University majoring in Journalism. Currently, I am about to begin my sophomore year and I am really excited about the opportunities ahead in media, storytelling, and communication.
                 </p>
                 <p>
-                    Some of the hobbies I have include playing volleyball, baking, painting, and exercising in the gym. Having lots of hobbies allows me to be creative and physically active and just have fun doing things that make me happy. My relationship with reading is very different from writing. Being a journalism student, I do enjoy writing, and do think I’m pretty skilled at it. But reading, on the other hand, is the opposite. I still enjoy it, but I have to work harder to stay focused and engaged with longer texts.
+                    Some of the hobbies I have include playing volleyball, baking, painting, and exercising in the gym. Having lots of hobbies allows me to be creative and physically active and just helps me maintain a balanced lifestyle while I grow academically and personally.
                 </p>
             </div>
         </section>
@@ -229,11 +269,20 @@
             <div class="welcome-section">
                 <h2><span style="color: #2ecc71;">Writing Process Archive</span></h2>
                 <p>
-                    In this unit, I learned how important it is to examine my own writing process and reflect on the choices I make as a writer. I discovered that good writing is not only about grammar or structure, but also about purpose, audience, and revision.
+                    In this unit, I learned how important it is to examine my own writing process and reflect on the choices I make as a writer. I discovered that good writing is not only about grammar and structure but also about how I read, question, and make meaning from the world around me.
                 </p>
                 <p>
                     This unit helped me become more intentional with my work and more aware of how reading and inquiry shape my understanding of the world around me.
                 </p>
+
+                <div class="unit1-visual">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Unit 1 brainstorming concept map" />
+                </div>
+
+                <div class="unit1-blog-space">
+                    <h3>Blog Reflection</h3>
+                    <p>Write your reflection here about what this brainstorming process taught you, how your ideas developed, and what you noticed about your writing habits.</p>
+                </div>
             </div>
         </section>
 
@@ -268,14 +317,11 @@
             link.addEventListener('click', (e) => {
                 e.preventDefault();
 
-                // Remove active class from all links and pages
                 navLinks.forEach(l => l.classList.remove('active'));
                 pages.forEach(p => p.classList.remove('active'));
 
-                // Add active class to clicked link
                 link.classList.add('active');
 
-                // Show corresponding page
                 const pageId = link.getAttribute('data-page');
                 document.getElementById(pageId).classList.add('active');
             });
